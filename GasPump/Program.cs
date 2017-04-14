@@ -10,13 +10,13 @@ namespace GasPump{
 
         static void Main(string[] args){
 
-            char c;
+            char ch;
             Console.WriteLine("Select model for activation: ");
             Console.WriteLine("1. GasPump-1");
             Console.WriteLine("2. GasPump-2");
-            c = Console.ReadKey().KeyChar;
+            ch = Console.ReadKey().KeyChar;
 
-            if (c == '1'){
+            if (ch == '1'){
                 GasPump1 gP1;
 
                 Console.WriteLine("GasPump-1");
@@ -36,14 +36,14 @@ namespace GasPump{
 
                 Console.WriteLine("GasPump-1 Execution Feed:");
 
-                while (c != 'q'){
+                while (ch != 'q'){
 
                     Console.WriteLine("Select Operation: ");
                     Console.WriteLine("0. Activate, 1. Start, 2. PayCredit, 3. Reject 4. Cancel, 5. Approved,");
                     Console.WriteLine("6. Super, 7. Regular, 8. StartPump, 9. PumpGallon, s. StopPump, q. Quit");
-                    c = Console.ReadKey().KeyChar;
+                    ch = Console.ReadKey().KeyChar;
 
-                    switch (c){
+                    switch (ch){
                         case '0': {
                                 float a, b;
                                 Console.WriteLine("Operation: Activate(float a, float b)");
@@ -118,8 +118,123 @@ namespace GasPump{
                 }
 
             }
-            else if (c == '2'){
+            else if (ch == '2'){
                 GasPump2 gP2;
+
+                Console.WriteLine("GasPump-2");
+                Console.WriteLine("Menu");
+                Console.WriteLine("0. Activate(int, int, int)");
+                Console.WriteLine("1. Start()");
+                Console.WriteLine("2. PayCash(int)");
+                Console.WriteLine("3. Cancel()");
+                Console.WriteLine("4. Premium()");
+                Console.WriteLine("5. Regular()");
+                Console.WriteLine("6. Super()");
+                Console.WriteLine("7. StartPump()");
+                Console.WriteLine("8. PumpLiter()");
+                Console.WriteLine("s. Stop()");
+                Console.WriteLine("r. Receipt()");
+                Console.WriteLine("n. NoReceipt()");
+                Console.WriteLine("q. Quit");
+
+                Console.WriteLine("GasPump-1 Execution Feed:");
+
+                while (ch != 'q')
+                {
+
+                    Console.WriteLine("Select Operation: ");
+                    Console.WriteLine("0. Activate, 1. Start, 2. PayCredit, 3. Reject 4. Cancel, 5. Approved,");
+                    Console.WriteLine("6. Super, 7. Regular, 8. StartPump, 9. PumpGallon, s. StopPump, q. Quit");
+                    ch = Console.ReadKey().KeyChar;
+
+                    switch (ch)
+                    {
+                        case '0':
+                            {
+                                int a, b, c;
+                                Console.WriteLine("Operation: Activate(int a, int b, int c)");
+                                Console.WriteLine("Please enter a value for parameter a: ");
+                                a = int.Parse(Console.ReadLine());
+                                Console.WriteLine("Please enter a value for parameter b: ");
+                                b = int.Parse(Console.ReadLine());
+                                Console.WriteLine("Please enter a value for parameter c: ");
+                                c = int.Parse(Console.ReadLine());
+                                gP2.activate(a, b, c);
+                                break;
+                            }
+                        case '1':
+                            {
+                                Console.WriteLine("Operation: Start()");
+                                gP2.start();
+                                break;
+                            }
+                        case '2':
+                            {
+                                Console.WriteLine("Operation: PayCash(int c)");
+                                Console.WriteLine("Please enter an amount to pay.");
+                                int c;
+                                c = int.Parse(Console.ReadLine());
+                                gP2.payCash(c);
+                                break;
+                            }
+                        case '3':
+                            {
+                                Console.WriteLine("Operation: Cancel()");
+                                gP2.cancel();
+                                break;
+                            }
+                        case '4':
+                            {
+                                Console.WriteLine("Operation: Premium()");
+                                gP2.premium();
+                                break;
+                            }
+                        case '5':
+                            {
+                                Console.WriteLine("Operation: Regular()");
+                                gP2.regular();
+                                break;
+                            }
+                        case '6':
+                            {
+                                Console.WriteLine("Operation: Super()");
+                                gP2.super();
+                                break;
+                            }
+                        case '7':
+                            {
+                                Console.WriteLine("Operation: StartPump()");
+                                gP2.startPump();
+                                break;
+                            }
+                        case '8':
+                            {
+                                Console.WriteLine("Operation: PumpLiter()");
+                                gP2.pumpliter();
+                                break;
+                            }
+                        case 's':
+                            {
+                                Console.WriteLine("Operation: Stop()");
+                                gP2.stop();
+                                break;
+                            }
+                        case 'r':
+                            {
+                                Console.WriteLine("Operation: Receipt()");
+                                gP2.receipt();
+                                break;
+                            }
+                        case 'n':
+                            {
+                                Console.WriteLine("Operation: NoReceipt()");
+                                gP2.noReceipt();
+                                break;
+                            }
+
+                    }
+
+                }
             }
         }
     }
