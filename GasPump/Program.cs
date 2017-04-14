@@ -45,14 +45,74 @@ namespace GasPump{
 
                     switch (c){
                         case '0': {
+                                float a, b;
+                                Console.WriteLine("Operation: Activate(float a, float b)");
+                                Console.WriteLine("Please enter a value for parameter a: ");
+                                a = float.Parse(Console.ReadLine());
+                                Console.WriteLine("Please enter a value for parameter b: ");
+                                b = float.Parse(Console.ReadLine());
+                                gP1.activate(a, b);
                                 break;
                         }
                         case '1': {
+                                Console.WriteLine("Operation: Start()");
+                                gP1.start();
                                 break;
                         }
                         case '2': {
+                                Console.WriteLine("Operation: PayCredit()");
+                                gP1.payCredit();
                                 break;
                         }
+                        case '3':
+                            {
+                                Console.WriteLine("Operation: Reject()");
+                                gP1.reject();
+                                break;
+                        }
+                        case '4':
+                            {
+                                Console.WriteLine("Operation: Cancel()");
+                                gP1.cancel();
+                                break;
+                        }
+                        case '5':
+                            {
+                                Console.WriteLine("Operation: Approved()");
+                                gP1.approved();
+                                break;
+                        }
+                        case '6':
+                            {
+                                Console.WriteLine("Operation: Super()");
+                                gP1.super();
+                                break;
+                        }
+                        case '7':
+                            {
+                                Console.WriteLine("Operation: Regular()");
+                                gP1.regular();
+                                break;
+                        }
+                        case '8':
+                            {
+                                Console.WriteLine("Operation: StartPump()");
+                                gP1.startPump();
+                                break;
+                        }
+                        case '9':
+                            {
+                                Console.WriteLine("Operation: PumpGallon()");
+                                gP1.pumpGallon();
+                                break;
+                        }
+                        case 's':
+                            {
+                                Console.WriteLine("Operation: StopPump()");
+                                gP1.stopPump();
+                                break;
+                        }
+
                     }
 
                 }
