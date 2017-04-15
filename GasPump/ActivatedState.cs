@@ -10,7 +10,8 @@ namespace GasPump
     {
         public override void start()
         {
-
+            oPP.payMsg();
+            mEP.changeState(1);
         }
 
         public override void payCash()

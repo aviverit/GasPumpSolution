@@ -15,12 +15,14 @@ namespace GasPump
 
         public override void payCash()
         {
-
+            mEP.changeState(3);
+            oPP.storeCash();
+            oPP.displayMenu();
         }
 
         public override void payCredit()
         {
-
+            mEP.changeState(2);
         }
 
         public override void approved()
