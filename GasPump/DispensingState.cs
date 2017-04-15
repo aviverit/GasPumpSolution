@@ -60,12 +60,14 @@ namespace GasPump
 
         public override void pumpOnce()
         {
-
+            oPP.pumpOnce();
+            oPP.gasPumpedMsg();
         }
 
         public override void stopPump()
         {
-
+            mEP.changeState(6);
+            oPP.stopMsg();
         }
 
         public override void receipt()
