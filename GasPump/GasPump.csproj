@@ -46,6 +46,7 @@
     <Compile Include="ActivatedState.cs" />
     <Compile Include="DataStorage.cs" />
     <Compile Include="MDAEFSM.cs" />
+    <Compile Include="OutputProcessor.cs" />
     <Compile Include="ReceiptState.cs" />
     <Compile Include="DispensingState.cs" />
     <Compile Include="SelectedState.cs" />

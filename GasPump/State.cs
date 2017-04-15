@@ -9,6 +9,7 @@ namespace GasPump
     abstract class State
     {
         MDAEFSM mEP;
+        OutputProcessor oPP;
 
         abstract public void start();
         abstract public void payCash();
