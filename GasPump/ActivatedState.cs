@@ -8,27 +8,32 @@ namespace GasPump
 {
     class ActivatedState : State
     {
+        public override void start()
+        {
+
+        }
+
+        public override void payCash()
+        {
+
+        }
+
+        public override void payCredit()
+        {
+
+        }
+
         public override void approved()
         {
             
         }
 
+        public override void reject()
+        {
+
+        }
+
         public override void cancel()
-        {
-            
-        }
-
-        public override void noReceipt()
-        {
-            
-        }
-
-        public override void payCash(int c)
-        {
-            
-        }
-
-        public override void payCredit()
         {
             
         }
@@ -38,19 +43,9 @@ namespace GasPump
             
         }
 
-        public override void pumpGallon()
+        public override void super()
         {
-            
-        }
 
-        public override void pumpLiter()
-        {
-            
-        }
-
-        public override void receipt()
-        {
-            
         }
 
         public override void regular()
@@ -58,29 +53,29 @@ namespace GasPump
             
         }
 
-        public override void Reject()
-        {
-            
-        }
-
-        public override void start()
-        {
-            
-        }
-
         public override void startPump()
         {
-            
+
+        }
+
+        public override void pumpOnce()
+        {
+
         }
 
         public override void stopPump()
         {
-            
+
         }
 
-        public override void super()
+        public override void receipt()
         {
-            
+
+        }
+
+        public override void noReceipt()
+        {
+
         }
     }
 }

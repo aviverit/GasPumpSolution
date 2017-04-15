@@ -9,22 +9,12 @@ namespace GasPump
     class CreditState : State
     {
 
-        public override void approved()
+        public override void start()
         {
 
         }
 
-        public override void cancel()
-        {
-
-        }
-
-        public override void noReceipt()
-        {
-
-        }
-
-        public override void payCash(int c)
+        public override void payCash()
         {
 
         }
@@ -34,22 +24,27 @@ namespace GasPump
 
         }
 
+        public override void approved()
+        {
+
+        }
+
+        public override void reject()
+        {
+
+        }
+
+        public override void cancel()
+        {
+
+        }
+
         public override void premium()
         {
 
         }
 
-        public override void pumpGallon()
-        {
-
-        }
-
-        public override void pumpLiter()
-        {
-
-        }
-
-        public override void receipt()
+        public override void super()
         {
 
         }
@@ -59,17 +54,12 @@ namespace GasPump
 
         }
 
-        public override void Reject()
-        {
-
-        }
-
-        public override void start()
-        {
-
-        }
-
         public override void startPump()
+        {
+
+        }
+
+        public override void pumpOnce()
         {
 
         }
@@ -79,7 +69,12 @@ namespace GasPump
 
         }
 
-        public override void super()
+        public override void receipt()
+        {
+
+        }
+
+        public override void noReceipt()
         {
 
         }

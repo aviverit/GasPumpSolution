@@ -28,61 +28,71 @@ namespace GasPump
 
         public void activate()
         {
-            if ((a > 0) && (b > 0))
-            {
-                mEP.activate();
-            }
+            sP = lS[0];
         }
 
         public void start()
         {
-            mEP.start();
+            sP.start();
         }
 
-        public void payCredit()
+        public void payType(int ct)
         {
-            mEP.payType(1);
+            if (ct == 0)
+            {
+                sP.payCash();
+            }
+            else if (ct == 1) {
+                sP.payCredit();
+            }
         }
 
         public void reject()
         {
-            mEP.reject();
+            sP.reject();
         }
 
         public void cancel()
         {
-            mEP.cancel();
+            sP.cancel();
         }
 
         public void approved()
         {
-            mEP.approved();
+            sP.approved();
         }
 
-        public void super()
+        public void selectGas(int gt)
         {
-            mEP.selectGas(1);
-        }
-
-        public void regular()
-        {
-            mEP.selectGas(0);
+            if (gt == 0)
+            {
+                sP.regular();
+            }
+            else if (gt == 1)
+            {
+                sP.super();
+            }
+            else if (gt == 2)
+            {
+                sP.premium();
+            } 
         }
 
         public void startPump()
         {
-            mEP.startPump();
+            sP.startPump();
         }
 
         public void pumpGallon()
         {
-            mEP.pumpOnce();
+            sP.pumpOnce();
         }
 
         public void stopPump()
         {
-            mEP.stopPump();
-            mEP.receipt();
+            sP.stopPump();
+            sP.receipt();//Could be an issue if this is called before changeState
+
         }
 
     }
