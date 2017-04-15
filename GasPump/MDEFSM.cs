@@ -6,10 +6,8 @@ using System.Threading.Tasks;
 
 namespace GasPump
 {
-    class GasPump1
+    class MDEFSM
     {
-        GasPump1() {
-            MDEFSM mEP;
-        }
+
     }
 }
