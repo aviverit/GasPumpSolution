@@ -70,12 +70,15 @@ namespace GasPump
 
         public override void receipt()
         {
-
+            mEP.changeState(0);
+            oPP.printReceipt();
+            oPP.returnCash();
         }
 
         public override void noReceipt()
         {
-
+            mEP.changeState(0);
+            oPP.returnCash();
         }
     }
 }
