@@ -26,12 +26,14 @@ namespace GasPump
 
         public override void approved()
         {
-
+            mEP.changeState(3);
+            oPP.displayMenu();
         }
 
         public override void reject()
         {
-
+            mEP.changeState(0);
+            oPP.rejectMsg();
         }
 
         public override void cancel()
