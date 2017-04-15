@@ -6,23 +6,30 @@ using System.Threading.Tasks;
 
 namespace GasPump
 {
-    class GasPump2
+    class MDAEFSM
     {
-        MDAEFSM mEP;
-        DataStorage dSP;
+        State sP;
+        State[] lS;
 
-        GasPump1()
+        MDAEFSM()
         {
-
+            lS[0] = new ActivatedState();
+            lS[1] = new StartedState();
+            lS[2] = new CreditState();
+            lS[3] = new PaidState();
+            lS[4] = new SelectedState();
+            lS[5] = new DispensingState();
+            lS[6] = new ReceiptState();
         }
 
-        public void activate(int a, int b, int c)
+        public void changeState(int s) {
+            sP = lS[s];
+        }
+
+        public void activate()
         {
-            if ((a > 0) && (b > 0) && (c>0))
+            if ((a > 0) && (b > 0))
             {
-                dSP.set2A(a);
-                dSP.set2B(b);
-                dSP.set2C(c);
                 mEP.activate();
             }
         }
@@ -32,10 +39,14 @@ namespace GasPump
             mEP.start();
         }
 
-        public void payCash(int c)
+        public void payCredit()
         {
-            dSP.set2Cash(c);
-            mEP.payType(0);
+            mEP.payType(1);
+        }
+
+        public void reject()
+        {
+            mEP.reject();
         }
 
         public void cancel()
@@ -43,9 +54,9 @@ namespace GasPump
             mEP.cancel();
         }
 
-        public void premium()
+        public void approved()
         {
-            mEP.selectGas(2);
+            mEP.approved();
         }
 
         public void super()
@@ -63,25 +74,16 @@ namespace GasPump
             mEP.startPump();
         }
 
-        public void pumpLiter()
+        public void pumpGallon()
         {
-            if (dSP.get2Cash() < (dSP.get2L() + 1) * dSP.get2Price()) {
-                mEP.stopPump();
-            }
             mEP.pumpOnce();
         }
 
-        public void stop()
+        public void stopPump()
         {
             mEP.stopPump();
-        }
-
-        public void receipt() {
             mEP.receipt();
         }
 
-        public void noReceipt() {
-            mEP.noReceipt();
-        }
     }
 }

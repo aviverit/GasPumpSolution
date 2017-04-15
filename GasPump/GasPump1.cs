@@ -8,7 +8,7 @@ namespace GasPump
 {
     class GasPump1
     {
-        MDEFSM mEP;
+        MDAEFSM mEP;
         DataStorage dSP;
 
         GasPump1()
