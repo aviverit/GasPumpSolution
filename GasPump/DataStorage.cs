@@ -6,11 +6,7 @@ using System.Threading.Tasks;
 
 namespace GasPump
 {
-    class GasPump1
+    class DataStorage
     {
-        GasPump1() {
-            MDEFSM mEP;
-            DataStorage dSP;
-        }
     }
 }
