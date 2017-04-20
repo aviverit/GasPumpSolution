@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ActivatedState.cs" />
+    <Compile Include="SuperPrice.cs" />
     <Compile Include="DataStorage.cs" />
     <Compile Include="MDAEFSM.cs" />
     <Compile Include="OutputProcessor.cs" />
