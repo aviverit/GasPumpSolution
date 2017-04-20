@@ -8,6 +8,7 @@ namespace GasPump
 {
     class OutputProcessor
     {
+        PriceStrategy priceStrat;
 
         public void payMsg(){
             Console.WriteLine("Please insert payment. ");
@@ -26,7 +27,8 @@ namespace GasPump
         }
 
         public void setPrice(int gT){
-
+            if (gT=0) {
+                priceStrat = new RegularPrice();
         }
 
         public void setInitialValues(){
