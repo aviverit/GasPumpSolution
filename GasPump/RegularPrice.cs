@@ -6,8 +6,11 @@ using System.Threading.Tasks;
 
 namespace GasPump
 {
-    abstract class PriceStrategy
+    class RegularPrice : PriceStrategy
     {
-        abstract public void setPrice();
+        public override void setPrice()
+        {
+           
+        }
     }
 }

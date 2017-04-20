@@ -50,6 +50,7 @@
     <Compile Include="PriceStrategy.cs" />
     <Compile Include="ReceiptState.cs" />
     <Compile Include="DispensingState.cs" />
+    <Compile Include="RegularPrice.cs" />
     <Compile Include="SelectedState.cs" />
     <Compile Include="PaidState.cs" />
     <Compile Include="CreditState.cs" />
