@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AbstractFactory.cs" />
     <Compile Include="ActivatedState.cs" />
     <Compile Include="PremiumPrice.cs" />
     <Compile Include="SuperPrice.cs" />
