@@ -8,5 +8,8 @@ namespace GasPump
 {
     class GP2ConcreteFactory
     {
+        RegularPrice rPrice;
+        SuperPrice sPrice;
+        PremiumPrice pPrice;
     }
 }

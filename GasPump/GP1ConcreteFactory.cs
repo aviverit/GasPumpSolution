@@ -8,5 +8,8 @@ namespace GasPump
 {
     class GP1ConcreteFactory : AbstractFactory
     {
+        RegularPrice rPrice;
+        SuperPrice sPrice;
+
     }
 }
