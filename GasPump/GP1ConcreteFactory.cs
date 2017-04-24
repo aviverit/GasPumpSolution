@@ -11,5 +11,10 @@ namespace GasPump
         RegularPrice rPrice;
         SuperPrice sPrice;
 
+        public override void setPricePack()
+        {
+            rPrice.getPrice();
+            sPrice.getPrice();
+        }
     }
 }
