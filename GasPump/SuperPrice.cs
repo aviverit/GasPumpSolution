@@ -12,5 +12,10 @@ namespace GasPump
         {
 
         }
+
+        public override void getPrice()
+        {
+
+        }
     }
 }

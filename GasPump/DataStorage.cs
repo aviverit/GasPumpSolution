@@ -39,5 +39,36 @@ namespace GasPump
         {
             cash = c;
         }
+
+
+        public float get1A()
+        {
+            return a1;
+        }
+
+        public float set1B()
+        {
+            return b1;
+        }
+
+        public int set2A()
+        {
+            return a2;
+        }
+
+        public int set2B()
+        {
+            return b2;
+        }
+
+        public int set2C()
+        {
+            return c2;
+        }
+
+        public int get2Cash()
+        {
+            return cash;
+        }
     }
 }

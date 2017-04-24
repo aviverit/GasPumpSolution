@@ -7,8 +7,9 @@ using System.Threading.Tasks;
 namespace GasPump
 {
     class PremiumPrice : PriceStrategy
-    {
-        public override void setPrice()
+    { 
+
+        public override void getPrice(DataStorage dS)
         {
 
         }

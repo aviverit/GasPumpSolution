@@ -8,6 +8,6 @@ namespace GasPump
 {
     abstract class PriceStrategy
     {
-        abstract public void setPrice();
+        abstract public void getPrice(DataStorage dS);
     }
 }

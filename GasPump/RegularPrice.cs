@@ -8,9 +8,10 @@ namespace GasPump
 {
     class RegularPrice : PriceStrategy
     {
-        public override void setPrice()
+
+        public override void getPrice(DataStorage dS)
         {
-           
+            return dS.getRegularPrice();
         }
     }
 }
