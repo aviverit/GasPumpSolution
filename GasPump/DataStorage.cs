@@ -8,8 +8,21 @@ namespace GasPump
 {
     class DataStorage
     {
-        float a1, b1;
-        int a2, b2, c2, cash;
+        private static DataStorage instance;
+
+        private DataStorage() { }
+
+        public static DataStorage Instance {
+            get {
+                if (instance == null) {
+                    instance = new DataStorage();
+                }
+                return instance;
+            }
+        }
+
+        float a1, b1; //GP1: Regular and Super
+        int a2, b2, c2, cash; //GP2: Regular, Premium, Super
 
         public void set1A(float a) {
             a1 = a;
