@@ -11,10 +11,12 @@ namespace GasPump
         RegularPrice rPrice;
         SuperPrice sPrice;
 
+        DataStorage dS = DataStorage.Instance;
+
         public override void setPricePack()
         {
-            rPrice.getPrice();
-            sPrice.getPrice();
+            rPrice.getPrice(dS,1);
+            sPrice.getPrice(dS,1);
         }
     }
 }
