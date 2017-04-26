@@ -58,9 +58,9 @@ namespace GasPump
 
         public override void startPump()
         {
-            mEP.changeState(5);
             oPP.setInitialValues();
             oPP.readyMsg();
+            mEP.changeState(5);
         }
 
         public override void pumpOnce()

@@ -109,7 +109,7 @@ namespace GasPump
         }
 
         public void receipt() {
-            sP.receipt();//Could be an issue if this is called before changeState
+            sP.receipt();
         }
 
         public void noReceipt() {

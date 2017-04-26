@@ -18,9 +18,9 @@ namespace GasPump
 
         public override void payCash()
         {
-            mEP.changeState(3);
             oPP.storeCash();
             oPP.displayMenu();
+            mEP.changeState(3);
         }
 
         public override void payCredit()

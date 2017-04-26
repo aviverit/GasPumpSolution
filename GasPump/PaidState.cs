@@ -38,27 +38,27 @@ namespace GasPump
 
         public override void cancel()
         {
-            mEP.changeState(0);
             oPP.cancelMsg();
             oPP.returnCash();
+            mEP.changeState(0);
         }
 
         public override void premium()
         {
-            mEP.changeState(4);
             oPP.setPrice(2);
+            mEP.changeState(4);
         }
 
         public override void super()
         {
-            mEP.changeState(4);
             oPP.setPrice(1);
+            mEP.changeState(4);
         }
 
         public override void regular()
         {
-            mEP.changeState(4);
             oPP.setPrice(0);
+            mEP.changeState(4);
         }
 
         public override void startPump()

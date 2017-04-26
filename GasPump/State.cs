@@ -7,9 +7,7 @@ using System.Threading.Tasks;
 namespace GasPump
 {
     abstract class State
-    {
-        MDAEFSM mEP = MDAEFSM.Instance;
-        OutputProcessor oPP;
+    { 
 
         abstract public void start();
         abstract public void payCash();

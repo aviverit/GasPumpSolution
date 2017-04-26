@@ -69,8 +69,8 @@ namespace GasPump
 
         public override void stopPump()
         {
-            mEP.changeState(6);
             oPP.stopMsg();
+            mEP.changeState(6);
         }
 
         public override void receipt()
