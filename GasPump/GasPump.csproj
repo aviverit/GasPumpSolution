@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="AbstractFactory.cs" />
     <Compile Include="ActivatedState.cs" />
+    <Compile Include="CashPayment.cs" />
     <Compile Include="GP1ConcreteFactory.cs" />
     <Compile Include="GP2ConcreteFactory.cs" />
     <Compile Include="PayStrategy.cs" />
