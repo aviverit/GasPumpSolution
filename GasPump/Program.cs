@@ -17,7 +17,7 @@ namespace GasPump{
             ch = Console.ReadKey().KeyChar;
 
             if (ch == '1'){
-                GasPump1 gP1;
+                GasPump1 gP1 = new GasPump1();
 
                 Console.WriteLine("GasPump-1");
                 Console.WriteLine("Menu");
@@ -119,7 +119,7 @@ namespace GasPump{
 
             }
             else if (ch == '2'){
-                GasPump2 gP2;
+                GasPump2 gP2 =  new GasPump2();
 
                 Console.WriteLine("GasPump-2");
                 Console.WriteLine("Menu");
@@ -210,7 +210,7 @@ namespace GasPump{
                         case '8':
                             {
                                 Console.WriteLine("Operation: PumpLiter()");
-                                gP2.pumpliter();
+                                gP2.pumpLiter();
                                 break;
                             }
                         case 's':

@@ -9,18 +9,25 @@ namespace GasPump
     class MDAEFSM
     {
         State sP;
-        State[] lS;
+        State[] lS = new State[7] { new ActivatedState(),
+                                    new StartedState(),
+                                    new CreditState(),
+                                    new PaidState(),
+                                    new SelectedState(),
+                                    new DispensingState(),
+                                    new ReceiptState()};
+        /*lS[0] = new ActivatedState();
+        lS[1] = new StartedState();
+        lS[2] = new CreditState();
+        lS[3] = new PaidState();
+        lS[4] = new SelectedState();
+        lS[5] = new DispensingState();
+        lS[6] = new ReceiptState();*/
 
         private static MDAEFSM instance;
 
         private MDAEFSM() {
-            lS[0] = new ActivatedState();
-            lS[1] = new StartedState();
-            lS[2] = new CreditState();
-            lS[3] = new PaidState();
-            lS[4] = new SelectedState();
-            lS[5] = new DispensingState();
-            lS[6] = new ReceiptState();
+            
         }
 
         public static MDAEFSM Instance
@@ -34,8 +41,6 @@ namespace GasPump
                 return instance;
             }
         }
-
-
 
         public void changeState(int s) {
             sP = lS[s];

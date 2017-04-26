@@ -9,7 +9,9 @@ namespace GasPump
     class ActivatedState : State
     {
         MDAEFSM mEP = MDAEFSM.Instance;
-        OutputProcessor oPP;
+        OutputProcessor oPP = new OutputProcessor();
+
+        public ActivatedState() { }
 
         public override void start()
         {

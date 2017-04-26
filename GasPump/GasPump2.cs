@@ -11,7 +11,7 @@ namespace GasPump
         MDAEFSM mEP = MDAEFSM.Instance;
         DataStorage dSP = DataStorage.Instance;
 
-        GasPump2()
+        public GasPump2()
         {
 
         }
@@ -66,7 +66,7 @@ namespace GasPump
 
         public void pumpLiter()
         {
-            if (dSP.get2Cash() < (dSP.get2Liter() + 1) * dSP.getPrice()) {
+            if (dSP.get2Cash() < (dSP.get2Liter() + 1) * dSP.getPrice2()) {
                 mEP.stopPump();
             }
             mEP.pumpOnce();

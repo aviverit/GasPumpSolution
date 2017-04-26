@@ -10,7 +10,7 @@ namespace GasPump
     {
         AbstractFactory factory;
         PriceStrategy priceStrat;
-        PayStrategy payStrat;
+        //PayStrategy payStrat;
         DataStorage dS = DataStorage.Instance;
 
         public OutputProcessor() {

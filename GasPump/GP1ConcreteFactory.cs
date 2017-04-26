@@ -8,8 +8,8 @@ namespace GasPump
 {
     class GP1ConcreteFactory : AbstractFactory
     {
-        RegularPriceStrategy rPrice;
-        SuperPriceStrategy sPrice;
+        //RegularPriceStrategy rPrice;
+        //SuperPriceStrategy sPrice;
 
         //float rP, sP;
 

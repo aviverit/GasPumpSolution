@@ -8,7 +8,7 @@ namespace GasPump
 {
     class CashPaymentStrategy : PayStrategy
     {
-        int total=0;
+        //int total=0;
 
         public override void payOnce()
         {

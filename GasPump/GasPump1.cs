@@ -11,7 +11,7 @@ namespace GasPump
         MDAEFSM mEP = MDAEFSM.Instance;
         DataStorage dSP = DataStorage.Instance;
 
-        GasPump1()
+        public GasPump1()
         {
             
         }

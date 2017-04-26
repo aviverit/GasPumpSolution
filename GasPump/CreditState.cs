@@ -10,7 +10,7 @@ namespace GasPump
     {
 
         MDAEFSM mEP = MDAEFSM.Instance;
-        OutputProcessor oPP;
+        OutputProcessor oPP = new OutputProcessor();
 
         public override void start()
         {
