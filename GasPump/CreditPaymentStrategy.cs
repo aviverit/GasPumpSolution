@@ -8,8 +8,8 @@ namespace GasPump
 {
     class CreditPaymentStrategy : PayStrategy
     {
-        float total = 0.0;
-        float GasAmount = 0.0;
+        int total = 0;
+        int GasAmount = 0;
 
         public override void payOnce()
         {

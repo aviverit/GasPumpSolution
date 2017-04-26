@@ -21,8 +21,8 @@ namespace GasPump
             }
         }
 
-        float a1, b1, price1; //GP1: Regular and Super
-        int a2, b2, c2, cash, literAmount, gallonAmount; //GP2: Regular, Premium, Super
+        float a1, b1; //GP1: Regular and Super
+        int a2, b2, c2, price, cash, literAmount, gallonAmount; //GP2: Regular, Premium, Super
 
         public void set1A(float a) {
             a1 = a;
@@ -46,6 +46,10 @@ namespace GasPump
         public void set2C(int c)
         {
             c2 = c;
+        }
+
+        public void setPrice(int p) {
+            price = p;
         }
 
         public void set2Cash(int c)
@@ -86,6 +90,10 @@ namespace GasPump
         public int get2C()
         {
             return c2;
+        }
+
+        public int getPrice() {
+            return price;
         }
 
         public int get2Cash()
