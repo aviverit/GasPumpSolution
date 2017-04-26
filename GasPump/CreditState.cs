@@ -30,13 +30,13 @@ namespace GasPump
         public override void approved()
         {
             oPP.displayMenu();
-            mEP.changeState(3);
+            MDAEFSM.Instance.changeState(3);
         }
 
         public override void reject()
         {
             oPP.rejectMsg();
-            mEP.changeState(0);
+            MDAEFSM.Instance.changeState(0);
         }
 
         public override void cancel()

@@ -19,12 +19,12 @@ namespace GasPump
         public override void payCash()
         {
             oPP.displayMenu();
-            mEP.changeState(3);
+            MDAEFSM.Instance.changeState(3);
         }
 
         public override void payCredit()
         {
-            mEP.changeState(2);
+            MDAEFSM.Instance.changeState(2);
         }
 
         public override void approved()

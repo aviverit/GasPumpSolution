@@ -8,15 +8,17 @@ namespace GasPump
 {
     class ActivatedState : State
     {
-        MDAEFSM mEP = MDAEFSM.Instance;
+        MDAEFSM mEP = MDAEFSM.Instance;// = MDAEFSM.Instance;
         OutputProcessor oPP = new OutputProcessor();
 
-        public ActivatedState() { }
+        public ActivatedState() {
+            mEP = MDAEFSM.Instance;
+        }
 
         public override void start()
         {
             oPP.payMsg();
-            mEP.changeState(1);
+            MDAEFSM.Instance.changeState(1);
         }
 
         public override void payCash()

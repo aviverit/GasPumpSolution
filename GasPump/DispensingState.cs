@@ -70,7 +70,7 @@ namespace GasPump
         public override void stopPump()
         {
             oPP.stopMsg();
-            mEP.changeState(6);
+            MDAEFSM.Instance.changeState(6);
         }
 
         public override void receipt()

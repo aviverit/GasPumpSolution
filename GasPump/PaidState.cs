@@ -40,25 +40,25 @@ namespace GasPump
         {
             oPP.cancelMsg();
             oPP.returnCash();
-            mEP.changeState(0);
+            MDAEFSM.Instance.changeState(0);
         }
 
         public override void premium()
         {
             oPP.setPrice(2);
-            mEP.changeState(4);
+            MDAEFSM.Instance.changeState(4);
         }
 
         public override void super()
         {
             oPP.setPrice(1);
-            mEP.changeState(4);
+            MDAEFSM.Instance.changeState(4);
         }
 
         public override void regular()
         {
             oPP.setPrice(0);
-            mEP.changeState(4);
+            MDAEFSM.Instance.changeState(4);
         }
 
         public override void startPump()

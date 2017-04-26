@@ -60,7 +60,7 @@ namespace GasPump
         {
             oPP.setInitialValues();
             oPP.readyMsg();
-            mEP.changeState(5);
+            MDAEFSM.Instance.changeState(5);
         }
 
         public override void pumpOnce()

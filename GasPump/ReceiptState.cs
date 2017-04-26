@@ -75,14 +75,14 @@ namespace GasPump
         {
             oPP.receipt();
             oPP.returnCash();
-            mEP.changeState(0);
+            MDAEFSM.Instance.changeState(0);
         }
 
         public override void noReceipt()
         {
 
             oPP.returnCash();
-            mEP.changeState(0);
+            MDAEFSM.Instance.changeState(0);
         }
     }
 }

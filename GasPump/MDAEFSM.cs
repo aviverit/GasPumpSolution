@@ -6,10 +6,12 @@ using System.Threading.Tasks;
 
 namespace GasPump
 {
-    class MDAEFSM
+    public sealed class MDAEFSM
     {
-        State sP;
-        State[] lS = new State[7] { new ActivatedState(),
+        private State sP;
+        State[] lS;
+
+        /*private State[] lS = new State[7] { aS,
                                     new StartedState(),
                                     new CreditState(),
                                     new PaidState(),
@@ -24,22 +26,40 @@ namespace GasPump
         lS[5] = new DispensingState();
         lS[6] = new ReceiptState();*/
 
-        private static MDAEFSM instance;
+        private static MDAEFSM instance = new MDAEFSM();
+
+        static MDAEFSM() { }
 
         private MDAEFSM() {
+            ActivatedState aS = new ActivatedState();
+            StartedState sS = new StartedState();
+            CreditState cS = new CreditState();
+            PaidState pS = new PaidState();
+            SelectedState selS = new SelectedState();
+            DispensingState dS = new DispensingState();
+            ReceiptState rS = new ReceiptState();
+
+            lS = new State[7] { aS,
+                                sS,
+                                cS,
+                                pS,
+                                selS,
+                                dS,
+                                rS};
             
-        }
+        }   
 
         public static MDAEFSM Instance
         {
-            get
+            /*get
             {
                 if (instance == null)
                 {
                     instance = new MDAEFSM();
                 }
                 return instance;
-            }
+            }*/
+            get { return instance; }
         }
 
         public void changeState(int s) {
