@@ -38,10 +38,11 @@ namespace GasPump{
 
                 while (ch != 'q'){
 
-                    Console.WriteLine("Select Operation: ");
+                    Console.WriteLine("\nSelect Operation: ");
                     Console.WriteLine("0. Activate, 1. Start, 2. PayCredit, 3. Reject 4. Cancel, 5. Approved,");
-                    Console.WriteLine("6. Super, 7. Regular, 8. StartPump, 9. PumpGallon, s. StopPump, q. Quit");
+                    Console.WriteLine("6. Super, 7. Regular, 8. StartPump, 9. PumpGallon, s. StopPump, q. Quit\n");
                     ch = Console.ReadKey().KeyChar;
+                    Console.WriteLine();
 
                     switch (ch){
                         case '0': {
@@ -142,10 +143,11 @@ namespace GasPump{
                 while (ch != 'q')
                 {
 
-                    Console.WriteLine("Select Operation: ");
+                    Console.WriteLine("\nSelect Operation: ");
                     Console.WriteLine("0. Activate, 1. Start, 2. PayCredit, 3. Reject 4. Cancel, 5. Approved,");
-                    Console.WriteLine("6. Super, 7. Regular, 8. StartPump, 9. PumpGallon, s. StopPump, q. Quit");
+                    Console.WriteLine("6. Super, 7. Regular, 8. StartPump, 9. PumpGallon, s. StopPump, q. Quit\n");
                     ch = Console.ReadKey().KeyChar;
+                    Console.WriteLine();
 
                     switch (ch)
                     {
