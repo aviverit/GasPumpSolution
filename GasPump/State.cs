@@ -8,7 +8,7 @@ namespace GasPump
 {
     abstract class State
     {
-        MDAEFSM mEP;
+        MDAEFSM mEP = MDAEFSM.Instance;
         OutputProcessor oPP;
 
         abstract public void start();

@@ -8,7 +8,7 @@ namespace GasPump
 {
     class GasPump1
     {
-        MDAEFSM mEP;
+        MDAEFSM mEP = MDAEFSM.Instance;
         DataStorage dSP = DataStorage.Instance;
 
         GasPump1()
