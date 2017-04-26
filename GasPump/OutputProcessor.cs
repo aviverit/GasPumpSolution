@@ -10,10 +10,21 @@ namespace GasPump
     {
 
         int pricePerUnit;
+        AbstractFactory factory;
         PriceStrategy priceStrat;
         CashPaymentStrategy cashPS;
         CreditPaymentStrategy credPS;
         DataStorage dS = DataStorage.Instance;
+
+        public OutputProcessor() {
+            if (dS.getGQ() == 0)
+            {
+                factory = new GP1ConcreteFactory();
+            }
+            else if (dS.getGQ() == 1) {
+                factory = new GP2ConcreteFactory();
+            }
+        }
 
         public void payMsg(){
             Console.WriteLine("Please insert payment. ");
@@ -33,7 +44,7 @@ namespace GasPump
 
         public void setPrice(int gT)
         {
-            if (gT == 0)
+            /*if (gT == 0)
             {
                 priceStrat = new RegularPriceStrategy();
             }
@@ -44,9 +55,10 @@ namespace GasPump
             else if (gT == 2)
             {
                 priceStrat = new PremiumPriceStrategy();
-            }
+            }*/
+            priceStrat = factory.getPriceStrat();
 
-            pricePerUnit = priceStrat.getPrice(dS);
+            pricePerUnit = priceStrat.getPrice(gT);
 
             dS.setPrice(pricePerUnit);
         }

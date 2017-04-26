@@ -8,6 +8,9 @@ namespace GasPump
 {
     abstract class AbstractFactory
     {
-        abstract public void setPricePack();
+        abstract public PriceStrategy getPriceStrat(int gT);
+
+        abstract public PayStrategy getPayStrat();
+
     }
 }
