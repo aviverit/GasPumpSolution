@@ -23,6 +23,7 @@ namespace GasPump
                 dSP.set2A(a);
                 dSP.set2B(b);
                 dSP.set2C(c);
+                dSP.setGQ(1);
                 mEP.activate();
             }
         }

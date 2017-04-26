@@ -20,6 +20,7 @@ namespace GasPump
             if ((a > 0) && (b > 0)) {
                 dSP.set1A(a);
                 dSP.set1B(b);
+                dSP.setGQ(0);
                 mEP.activate();
             }
         }
