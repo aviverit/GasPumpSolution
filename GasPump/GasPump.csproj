@@ -47,6 +47,7 @@
     <Compile Include="ActivatedState.cs" />
     <Compile Include="GP1ConcreteFactory.cs" />
     <Compile Include="GP2ConcreteFactory.cs" />
+    <Compile Include="PayStrategy.cs" />
     <Compile Include="PremiumPrice.cs" />
     <Compile Include="SuperPrice.cs" />
     <Compile Include="DataStorage.cs" />
