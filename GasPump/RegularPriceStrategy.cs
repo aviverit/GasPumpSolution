@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GasPump
 {
-    class RegularPrice : PriceStrategy
+    class RegularPriceStrategy : PriceStrategy
     {
 
         public override float getPrice(DataStorage dS, int gPT)

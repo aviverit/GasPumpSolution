@@ -32,7 +32,7 @@ namespace GasPump
 
         public void setPrice(int gT){
             if (gT=0) {
-                priceStrat = new RegularPrice();
+                priceStrat = new RegularPriceStrategy();
         }
 
         public void setInitialValues(){

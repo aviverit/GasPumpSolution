@@ -45,20 +45,20 @@
   <ItemGroup>
     <Compile Include="AbstractFactory.cs" />
     <Compile Include="ActivatedState.cs" />
-    <Compile Include="CashPayment.cs" />
-    <Compile Include="CreditPayment.cs" />
+    <Compile Include="CashPaymentStrategy.cs" />
+    <Compile Include="CreditPaymentStrategy.cs" />
     <Compile Include="GP1ConcreteFactory.cs" />
     <Compile Include="GP2ConcreteFactory.cs" />
     <Compile Include="PayStrategy.cs" />
-    <Compile Include="PremiumPrice.cs" />
-    <Compile Include="SuperPrice.cs" />
+    <Compile Include="PremiumPriceStrategy.cs" />
+    <Compile Include="SuperPriceStrategy.cs" />
     <Compile Include="DataStorage.cs" />
     <Compile Include="MDAEFSM.cs" />
     <Compile Include="OutputProcessor.cs" />
     <Compile Include="PriceStrategy.cs" />
     <Compile Include="ReceiptState.cs" />
     <Compile Include="DispensingState.cs" />
-    <Compile Include="RegularPrice.cs" />
+    <Compile Include="RegularPriceStrategy.cs" />
     <Compile Include="SelectedState.cs" />
     <Compile Include="PaidState.cs" />
     <Compile Include="CreditState.cs" />

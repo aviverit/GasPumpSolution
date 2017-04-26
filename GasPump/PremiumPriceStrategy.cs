@@ -6,15 +6,12 @@ using System.Threading.Tasks;
 
 namespace GasPump
 {
-    class CashPayment : PayStrategy
-    {
-        int total=0;
-        int 
+    class PremiumPriceStrategy : PriceStrategy
+    { 
 
-
-        public override void payOnce()
+        public override void getPrice(DataStorage dS)
         {
-           
+
         }
     }
 }

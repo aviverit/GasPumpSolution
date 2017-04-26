@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace GasPump
 {
-    class PremiumPrice : PriceStrategy
-    { 
+    class SuperPriceStrategy : PriceStrategy
+    {
 
-        public override void getPrice(DataStorage dS)
+        public override void getPrice()
         {
 
         }

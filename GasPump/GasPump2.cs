@@ -65,7 +65,7 @@ namespace GasPump
 
         public void pumpLiter()
         {
-            if (dSP.get2Cash() < (dSP.get2L() + 1) * dSP.get2Price()) {
+            if (dSP.get2Cash() < (dSP.get2Liter() + 1) * dSP.get2Price()) {
                 mEP.stopPump();
             }
             mEP.pumpOnce();

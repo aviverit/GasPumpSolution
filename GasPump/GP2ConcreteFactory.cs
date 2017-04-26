@@ -8,9 +8,9 @@ namespace GasPump
 {
     class GP2ConcreteFactory : AbstractFactory
     {
-        RegularPrice rPrice;
-        SuperPrice sPrice;
-        PremiumPrice pPrice;
+        RegularPriceStrategy rPrice;
+        SuperPriceStrategy sPrice;
+        PremiumPriceStrategy pPrice;
 
         int rP, sP, pP;
 
