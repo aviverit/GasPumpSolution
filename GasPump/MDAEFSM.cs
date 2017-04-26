@@ -83,7 +83,7 @@ namespace GasPump
             sP.startPump();
         }
 
-        public void pumpGallon()
+        public void pumpOnce()
         {
             sP.pumpOnce();
         }
@@ -91,9 +91,14 @@ namespace GasPump
         public void stopPump()
         {
             sP.stopPump();
-            sP.receipt();//Could be an issue if this is called before changeState
-
         }
 
+        public void receipt() {
+            sP.receipt();//Could be an issue if this is called before changeState
+        }
+
+        public void noReceipt() {
+            sP.noReceipt();
+        }
     }
 }
