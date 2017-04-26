@@ -8,10 +8,6 @@ namespace GasPump
 {
     class SuperPrice : PriceStrategy
     {
-        public override void setPrice()
-        {
-
-        }
 
         public override void getPrice()
         {

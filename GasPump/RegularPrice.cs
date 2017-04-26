@@ -9,9 +9,14 @@ namespace GasPump
     class RegularPrice : PriceStrategy
     {
 
-        public override void getPrice(DataStorage dS, int gPT)
+        public override float getPrice(DataStorage dS, int gPT)
         {
-            return dS.getRegularPrice();
+            if (gPT==1) {
+                return dS.get1A();
+            } else if (gPT==2) {
+                return dS.get2A();
+            }
+            
         }
     }
 }

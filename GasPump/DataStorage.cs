@@ -59,22 +59,22 @@ namespace GasPump
             return a1;
         }
 
-        public float set1B()
+        public float get1B()
         {
             return b1;
         }
 
-        public int set2A()
+        public int get2A()
         {
             return a2;
         }
 
-        public int set2B()
+        public int get2B()
         {
             return b2;
         }
 
-        public int set2C()
+        public int get2C()
         {
             return c2;
         }
