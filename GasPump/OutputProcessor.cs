@@ -44,18 +44,7 @@ namespace GasPump
 
         public void setPrice(int gT)
         {
-            /*if (gT == 0)
-            {
-                priceStrat = new RegularPriceStrategy();
-            }
-            else if (gT == 1)
-            {
-                priceStrat = new SuperPriceStrategy();
-            }
-            else if (gT == 2)
-            {
-                priceStrat = new PremiumPriceStrategy();
-            }*/
+            
             priceStrat = factory.getPriceStrat();
 
             pricePerUnit = priceStrat.getPrice(gT);

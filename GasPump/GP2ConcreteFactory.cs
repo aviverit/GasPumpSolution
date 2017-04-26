@@ -12,11 +12,27 @@ namespace GasPump
         SuperPriceStrategy sPrice;
         PremiumPriceStrategy pPrice;
 
-        int rP, sP, pP;
+        //int rP, sP, pP;
 
-        DataStorage dS = DataStorage.Instance;
+        //DataStorage dS = DataStorage.Instance;
 
-        public override void setPricePack()
+        public override PriceStrategy getPriceStrat(int gT)
+        {
+            if (gT == 0)
+            {
+                return new RegularPriceStrategy();
+            }
+            else if (gT == 1)
+            {
+                return new SuperPriceStrategy();
+            }
+            else
+            {
+                return new PremiumPriceStrategy();
+            }
+        }
+
+        /*public override void setPricePack()
         {
             rP = rPrice.getPrice(dS,2);
             sP = sPrice.getPrice(dS,2);
@@ -36,6 +52,11 @@ namespace GasPump
             else {
                 return pP;
             }
+        }*/
+
+        public override PayStrategy getPayStrat()
+        {
+            return new CashPaymentStrategy();
         }
     }
 }
