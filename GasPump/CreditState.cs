@@ -9,6 +9,9 @@ namespace GasPump
     class CreditState : State
     {
 
+        MDAEFSM mEP = MDAEFSM.Instance;
+        OutputProcessor oPP;
+
         public override void start()
         {
 

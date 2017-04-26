@@ -8,6 +8,9 @@ namespace GasPump
 {
     class DispensingState : State
     {
+        MDAEFSM mEP = MDAEFSM.Instance;
+        OutputProcessor oPP;
+
         public override void start()
         {
 

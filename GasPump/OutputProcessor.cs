@@ -26,6 +26,10 @@ namespace GasPump
             Console.WriteLine("Sorry, but your card was declined. ");
         }
 
+        public void cancelMsg() {
+            Console.WriteLine("This transaction has been sucessfully cancelled.");
+        }
+
         public void setPrice(int gT){
             if (gT=0) {
                 priceStrat = new RegularPrice();

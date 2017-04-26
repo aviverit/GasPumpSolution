@@ -8,6 +8,9 @@ namespace GasPump
 {
     class ReceiptState : State
     {
+        MDAEFSM mEP = MDAEFSM.Instance;
+        OutputProcessor oPP;
+
         public override void start()
         {
 
