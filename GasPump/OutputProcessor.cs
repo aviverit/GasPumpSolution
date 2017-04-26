@@ -8,12 +8,9 @@ namespace GasPump
 {
     class OutputProcessor
     {
-
-        int pricePerUnit;
         AbstractFactory factory;
         PriceStrategy priceStrat;
-        CashPaymentStrategy cashPS;
-        CreditPaymentStrategy credPS;
+        PayStrategy payStrat;
         DataStorage dS = DataStorage.Instance;
 
         public OutputProcessor() {
@@ -44,12 +41,15 @@ namespace GasPump
 
         public void setPrice(int gT)
         {
-            
-            priceStrat = factory.getPriceStrat();
+            priceStrat = factory.getPriceStrat(gT);
 
-            pricePerUnit = priceStrat.getPrice(gT);
-
-            dS.setPrice(pricePerUnit);
+            if (dS.getGQ() == 0)
+            {
+                dS.setPrice1(priceStrat.getPrice1());
+            }
+            else if (dS.getGQ()==1){
+                dS.setPrice2(priceStrat.getPrice2());
+            }
         }
 
         public void setInitialValues(){
@@ -85,6 +85,17 @@ namespace GasPump
         }
 
         public void returnCash(){
+            if (dS.getGQ() == 1) {
+                if (dS.get2Cash() > (dS.getPrice2() * dS.get2Liter()))
+                {
+                    Console.WriteLine("Returning excess cash valuing: " + (dS.get2Cash() - (dS.getPrice2() * dS.get2Liter())) + ". ");
+                    dS.set2Cash(0);
+                }
+                else {
+                    Console.WriteLine("No excess cash to return.");
+                    dS.set2Cash(0);
+                }
+            }
 
         }
 

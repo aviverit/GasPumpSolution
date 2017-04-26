@@ -8,10 +8,16 @@ namespace GasPump
 {
     class SuperPriceStrategy : PriceStrategy
     {
+        DataStorage dS = DataStorage.Instance;
 
-        public override void getPrice()
+        public override float getPrice1()
         {
+            return dS.get1B();
+        }
 
+        public override int getPrice2()
+        {
+            return dS.get2C();
         }
     }
 }

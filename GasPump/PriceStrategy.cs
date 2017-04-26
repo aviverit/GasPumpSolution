@@ -8,8 +8,7 @@ namespace GasPump
 {
     abstract class PriceStrategy
     {
-        abstract public void forwardPriceRequest();
-        abstract public float getPriceStrat1();
-        abstract public int getPriceStrat2();
+        abstract public float getPrice1();
+        abstract public int getPrice2();
     }
 }

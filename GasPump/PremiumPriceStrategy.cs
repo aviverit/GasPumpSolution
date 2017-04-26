@@ -7,11 +7,17 @@ using System.Threading.Tasks;
 namespace GasPump
 {
     class PremiumPriceStrategy : PriceStrategy
-    { 
+    {
+        DataStorage dS = DataStorage.Instance;
 
-        public override void getPrice(DataStorage dS)
+        public override float getPrice1()
         {
+            return -1.00f;
+        }
 
+        public override int getPrice2()
+        {
+            return dS.get2B();
         }
     }
 }
