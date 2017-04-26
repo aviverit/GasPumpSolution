@@ -11,12 +11,27 @@ namespace GasPump
         RegularPrice rPrice;
         SuperPrice sPrice;
 
+        float rP, sP;
+
         DataStorage dS = DataStorage.Instance;
 
         public override void setPricePack()
         {
-            rPrice.getPrice(dS,1);
-            sPrice.getPrice(dS,1);
+            rP = rPrice.getPrice(dS,1);
+            sP = sPrice.getPrice(dS,1);
         }
+
+        public float getPrice(int gT) {
+            if (gT == 0)
+            {
+                return rP;
+            }else  {
+                return sP;
+            }
+        }
+
+        //public override void getPayOnce() {
+
+        //}
     }
 }
