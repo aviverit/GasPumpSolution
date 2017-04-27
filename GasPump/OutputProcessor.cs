@@ -29,6 +29,16 @@ namespace GasPump
 
         public void displayMenu(){
             Console.WriteLine("Menu");
+            Console.WriteLine("The following gas types are available:");
+            Console.WriteLine("Regular");
+            Console.WriteLine("Super");
+            if (dS.getGQ() == 1) {
+                Console.WriteLine("Premium");
+            }
+        }
+
+        public void credCheckMsg() {
+            Console.WriteLine("Please wait, checking credit...");
         }
 
         public void rejectMsg(){
@@ -50,6 +60,7 @@ namespace GasPump
             else if (dS.getGQ()==1){
                 dS.setPrice2(priceStrat.getPrice2());
             }
+            Console.WriteLine("Fuel selected. Preparing pump.");
         }
 
         public void setInitialValues(){
@@ -81,7 +92,7 @@ namespace GasPump
         }
 
         public void stopMsg(){
-            Console.WriteLine("Finished Fueling. Thank you for choosing us.");
+            Console.WriteLine("Finished Fueling.");
         }
 
         public void returnCash(){
@@ -101,6 +112,14 @@ namespace GasPump
 
         public void receipt(){
             Console.WriteLine("Please collect printing receipt and have a nice day.");
+            Console.WriteLine("RECEIPT");
+            if (dS.getGQ() == 0)
+            {
+                Console.WriteLine("Total Cost is $" + (dS.getPrice1() * dS.get1Gallon()));
+            }
+            else if (dS.getGQ() == 1) {
+                Console.WriteLine("Total Cost is $" + (dS.getPrice2() * dS.get2Liter()));
+            }
         }
 
         public void noReceipt(){

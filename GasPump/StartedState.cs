@@ -24,6 +24,7 @@ namespace GasPump
 
         public override void payCredit()
         {
+            oPP.credCheckMsg();
             MDAEFSM.Instance.changeState(2);
         }
 
