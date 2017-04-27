@@ -8,12 +8,6 @@ namespace GasPump
 {
     class GP1ConcreteFactory : AbstractFactory
     {
-        //RegularPriceStrategy rPrice;
-        //SuperPriceStrategy sPrice;
-
-        //float rP, sP;
-
-        //DataStorage dS = DataStorage.Instance;
 
         public override PriceStrategy getPriceStrat(int gT)
         {
@@ -25,26 +19,6 @@ namespace GasPump
             {
                 return new SuperPriceStrategy();
             }
-        }
-
-        /*public override void setPricePack()
-        {
-            rP = rPrice.getPrice(dS,1);
-            sP = sPrice.getPrice(dS,1);
-        }*/
-
-
-        /*public float getPriceStrat(int gT) {
-            if (gT == 0)
-            {
-                return rP;
-            }else  {
-                return sP;
-            }
-        }*/
-
-        public override PayStrategy getPayStrat() {
-            return new CreditPaymentStrategy();
         }
     }
 }

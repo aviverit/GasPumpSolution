@@ -8,7 +8,7 @@ namespace GasPump
 {
     class ActivatedState : State
     {
-        MDAEFSM mEP = MDAEFSM.Instance;// = MDAEFSM.Instance;
+        MDAEFSM mEP = MDAEFSM.Instance;
         OutputProcessor oPP = new OutputProcessor();
 
         public ActivatedState() {

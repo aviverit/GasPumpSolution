@@ -10,7 +10,5 @@ namespace GasPump
     {
         abstract public PriceStrategy getPriceStrat(int gT);
 
-        abstract public PayStrategy getPayStrat();
-
     }
 }

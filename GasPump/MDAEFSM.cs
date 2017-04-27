@@ -6,25 +6,10 @@ using System.Threading.Tasks;
 
 namespace GasPump
 {
-    public sealed class MDAEFSM
+    public sealed class MDAEFSM //This class is a singleton for the purpose of facilitating state change.
     {
         private State sP;
         State[] lS;
-
-        /*private State[] lS = new State[7] { aS,
-                                    new StartedState(),
-                                    new CreditState(),
-                                    new PaidState(),
-                                    new SelectedState(),
-                                    new DispensingState(),
-                                    new ReceiptState()};
-        /*lS[0] = new ActivatedState();
-        lS[1] = new StartedState();
-        lS[2] = new CreditState();
-        lS[3] = new PaidState();
-        lS[4] = new SelectedState();
-        lS[5] = new DispensingState();
-        lS[6] = new ReceiptState();*/
 
         private static MDAEFSM instance = new MDAEFSM();
 
@@ -51,14 +36,6 @@ namespace GasPump
 
         public static MDAEFSM Instance
         {
-            /*get
-            {
-                if (instance == null)
-                {
-                    instance = new MDAEFSM();
-                }
-                return instance;
-            }*/
             get { return instance; }
         }
 

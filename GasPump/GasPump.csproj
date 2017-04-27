@@ -45,11 +45,8 @@
   <ItemGroup>
     <Compile Include="AbstractFactory.cs" />
     <Compile Include="ActivatedState.cs" />
-    <Compile Include="CashPaymentStrategy.cs" />
-    <Compile Include="CreditPaymentStrategy.cs" />
     <Compile Include="GP1ConcreteFactory.cs" />
     <Compile Include="GP2ConcreteFactory.cs" />
-    <Compile Include="PayStrategy.cs" />
     <Compile Include="PremiumPriceStrategy.cs" />
     <Compile Include="SuperPriceStrategy.cs" />
     <Compile Include="DataStorage.cs" />
