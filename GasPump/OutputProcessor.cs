@@ -23,6 +23,11 @@ namespace GasPump
             }
         }
 
+        public void initalizeStorage() {
+            dS.set2Cash(0);
+            dS.setPrice2(0);
+        }
+
         public void payMsg(){
             Console.WriteLine("Please insert payment. ");
         }    

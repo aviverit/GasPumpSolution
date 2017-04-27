@@ -17,6 +17,7 @@ namespace GasPump
 
         public override void start()
         {
+            oPP.initalizeStorage();
             oPP.payMsg();
             MDAEFSM.Instance.changeState(1);
         }
