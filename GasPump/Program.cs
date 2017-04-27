@@ -144,8 +144,8 @@ namespace GasPump{
                 {
 
                     Console.WriteLine("\nSelect Operation: ");
-                    Console.WriteLine("0. Activate, 1. Start, 2. PayCredit, 3. Reject 4. Cancel, 5. Approved,");
-                    Console.WriteLine("6. Super, 7. Regular, 8. StartPump, 9. PumpGallon, s. StopPump, q. Quit\n");
+                    Console.WriteLine("0. Activate, 1. Start, 2. PayCash, 3. Cancel, 4. Premium, 5. Regular,");
+                    Console.WriteLine("6. Super, 7. StartPump, 8. PumpLiter, s. Stop, r. Receipt, n. NoReceipt q. Quit\n");
                     ch = Console.ReadKey().KeyChar;
                     Console.WriteLine();
 
